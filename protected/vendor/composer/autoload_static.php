@@ -278,8 +278,10 @@ class ComposerStaticInitbc826814bd843b09bca0e6832c8540f7
     );
 
     public static $classMap = array (
+        'AddLevelToUsersTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_24_071020_add_level_to_users_table.php',
         'CreateKategorisTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_22_152902_create_kategoris_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreatePostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_24_080119_create_posts_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',

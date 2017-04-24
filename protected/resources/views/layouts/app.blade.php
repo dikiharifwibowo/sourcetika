@@ -123,7 +123,8 @@
                             <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
                                 </a>
-                                
+                                <a class="dropdown-item" href="{{ url('home') }}">Dashboard
+                                </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                 </form>
@@ -140,7 +141,9 @@
        
         <br><br>
         <!--Footer-->
-        <footer class="page-footer center" style="background-color: #33b5e5;">
+        <footer class="page-footer center" style="background-color: #33b5e5; position: absolute; right: 0;
+  bottom: 0;
+  left: 0;">
 
             <!--Copyright-->
             <div class="footer-copyright" style="background-color: #33b5e5;">

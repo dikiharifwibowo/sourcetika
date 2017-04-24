@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/post', 'PostController@index');
+
+Route::get('/admin',['middleware'=>'admin', function(){
+		return view ('admin.admin');
+	}
+]);
