@@ -20,10 +20,8 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('theme/user/css/font-awesome.min.css')}} ">
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('theme/user/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -98,49 +96,55 @@
 
     <div id="app">
         <!--Navbar-->
-        <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
+        <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar" style="background-color: #33b5e5;">
             <div class="container">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <a class="navbar-brand" href="#">
-                    <strong>Navbar</strong>
+                <strong>SOURCETIKA</strong>
                 </a>
-                <div class="collapse navbar-collapse" id="navbarNav1">
+                <div class="collapse navbar-collapse" >
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link">Artikel<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Artikel</a>
+                            <a class="nav-link">Video</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">Event</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link">About</a>
-                        </li>
                     </ul>
-                    <form class="form-inline waves-effect waves-light">
-                        <input class="form-control" type="text" placeholder="Search">
-                    </form>
+                    <ul class="navbar-nav">
+                        @if (Auth::guest())
+                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                        @else
+                        <li class="nav-item dropdown btn-group">
+                            <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }} </a>
+                            <div class="dropdown-menu dropdown" aria-labelledby="dropdownMenu1">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                </form>
+                            </div>
+                        </li>
+                        @endif
+                    </ul>
                 </div>
             </div>
         </nav>
-        <!--/.Navbar-->
-         @yield('caroseal')
-        
-        <br>
+        <br><br><br>
         @yield('content')
         <!--Content-->
        
-
+        <br><br>
         <!--Footer-->
-        <footer class="page-footer center-on-small-only">
+        <footer class="page-footer center" style="background-color: #33b5e5;">
 
             <!--Copyright-->
-            <div class="footer-copyright">
-                <div class="container-fluid">
+            <div class="footer-copyright" style="background-color: #33b5e5;">
+                <div class="container">
                     © 2015 Copyright: <a href="http://www.MDBootstrap.com" rel="nofollow"> sourcetika.com</a>
 
                 </div>
@@ -164,6 +168,9 @@
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="{{ asset('theme/user/js/mdb.min.js') }}"></script>
+    <script>
+    new WOW().init();
+    </script>
 
 
 </body>

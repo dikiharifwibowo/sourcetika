@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<br>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -44,7 +45,10 @@
                                     <label>
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
                                     </label>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                    <a style="alignment-baseline: right;" href="{{ url('/register') }}">Register</a>
                                 </div>
+
                             </div>
                         </div>
 
@@ -64,5 +68,5 @@
             </div>
         </div>
     </div>
-</div>
+</div><br><br>
 @endsection

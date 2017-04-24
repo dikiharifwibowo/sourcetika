@@ -30,6 +30,9 @@
     <!-- Material Design Bootstrap -->
     <link href="{{ asset('theme/user/css/mdb.min.css') }}" rel="stylesheet">
 
+   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Template styles -->
     <style rel="stylesheet">
         /* TEMPLATE STYLES */
@@ -100,13 +103,11 @@
     <!--Navbar-->
     <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
         <div class="container">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+           
             <a class="navbar-brand" href="#">
                 <strong>SOURCETIKA</strong>
             </a>
-            <div class="collapse navbar-collapse" id="navbarNav1">
+            <div class="collapse navbar-collapse" >
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link">Artikel<span class="sr-only">(current)</span></a>
@@ -140,10 +141,10 @@
                         <li>
                             <h1 class="h1-responsive">Jogja Web Developer Community</h1></li>
                         <li>
-                            <p>Tulis artikelmu, bagikan ke Komunitas</p>
+                            <p>Tulis Pengalamanmu, bagikan ke Komunitas</p>
                         </li>
                         <li>
-                            <a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info btn-lg">MENULIS</a>
+                            <a href="{{ url('/login') }}" class="btn btn-info btn-lg">MENULIS</a> 
                         </li>
                     </ul>
                 </div>
@@ -161,6 +162,9 @@
 
     <!--Content-->
     <div class="container">
+        <hr>
+            <h2 align="center">ARTIKEL TERBARU</h2>
+        <hr>
         <div class="row">
              <div class="col-lg-8">
                 <div class="col-lg-6">
@@ -188,31 +192,7 @@
                     </div>
                     <!--/.Card-->
                 </div>
-                <div class="col-lg-6">
-                    <div class="card">
-
-                    <!--Card image-->
-                    <div class="view overlay hm-white-slight">
-                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
-                        <a href="#">
-                            <div class="mask"></div>
-                        </a>
-                    </div>
-                    <!--/.Card image-->
-
-                    <!--Card content-->
-                    <div class="card-block">
-                        <!--Title-->
-                        <h4 class="card-title">Trevelers Toolbox</h4>
-                        <!--Text-->
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-info">Read more</a>
-                    </div>
-                    <!--/.Card content-->
-
-                    </div>
-                    <!--/.Card-->
-                </div>
+                
              </div>
 
              <div class="col-lg-4">
@@ -220,7 +200,7 @@
                     <!--Card content-->
                     <div class="card-block">
                         <!--Text-->
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                        <p class="card-text"><i class="large material-icons">insert_chart</i> <br>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -242,6 +222,57 @@
         </div>
     </div>
     <!--/.Content-->
+
+    <div class="container">
+        <hr style="width: 400px;">
+            <h2 align="center">EVENT</h2>
+        <hr style="width: 400px;">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="col-lg-6">
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight">
+                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="" style="width: 100%; height: 240px;">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--Title-->
+                    <h4 class="card-title">Trevelers Toolbox</h4>
+                    <!--Text-->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.<a href="#">Read more</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container">
+        <hr style="width: 400px;">
+            <h2 align="center">VIDEO TURORIAL</h2>
+        <hr style="width: 400px;">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <!--Card content-->
+                    <div class="card-block">
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                 <!--/.Card-->
+            </div>
+        </div>
+    </div>
+
 
     <!--Footer-->
     <footer class="page-footer center-on-small-only">
@@ -271,7 +302,8 @@
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="{{ asset('theme/user/js/mdb.min.js') }}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+          
 
 </body>
 
