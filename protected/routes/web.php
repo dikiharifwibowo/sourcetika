@@ -21,7 +21,12 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/post', 'PostController@index');
 
-Route::get('/admin',['middleware'=>'admin', function(){
+
+
+Route::group(['middleware' => 'admin'], function () {
+
+ 	Route::get('/admin', function(){
 		return view ('admin.admin');
 	}
-]);
+	);
+});

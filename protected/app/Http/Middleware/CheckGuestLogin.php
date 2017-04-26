@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Middleware;
-use Session;
+
 use Closure;
-use Auth; //memanggil auth
-class RedirectNotAdmin
+use Illuminate\Support\Facades\Auth;
+
+class CheckGuestLogin
 {
     /**
      * Handle an incoming request.
@@ -16,12 +17,10 @@ class RedirectNotAdmin
     public function handle($request, Closure $next)
     {
         if (Auth::check()) {
-            if (Auth::user()->level != 'admin') {
-                Session::flash('redirectMessage','Anda Bukan admin');
-                return redirect()->back();
-            }
+            return $next($request);
         }
-
         return redirect()->back();
     }
+
+
 }

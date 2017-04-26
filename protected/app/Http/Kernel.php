@@ -58,5 +58,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'admin' => 'App\Http\Middleware\RedirectNotAdmin',
         //pemanggilan admin di sesuaikan nanti di router
+        'login' => 'App\Http\Middleware\CheckGuestLogin',
     ];
 }
