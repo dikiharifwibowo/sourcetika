@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Jogja Web Developer</title>
+    <title>{{ config('app.name', 'Sourcetika.com || Jogja Web Developer') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -20,18 +20,13 @@
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
+     <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('theme/user/css/font-awesome.min.css')}} ">
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('theme/user/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Material Design Bootstrap -->
     <link href="{{ asset('theme/user/css/mdb.min.css') }}" rel="stylesheet">
-
-   
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Template styles -->
     <style rel="stylesheet">
@@ -45,7 +40,7 @@
         /* Navigation*/
         
         .navbar {
-            background-color: transparent;
+            background-color: #304a74;
         }
         
         .top-nav-collapse {
@@ -96,6 +91,7 @@
     </style>
 
 </head>
+
 
 <body>
 
@@ -193,6 +189,31 @@
                     <!--/.Card-->
                 </div>
                 
+                <div class="col-lg-6">
+                    <div class="card">
+
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight">
+                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
+
+                    <!--Card content-->
+                    <div class="card-block">
+                        <!--Title-->
+                        <h4 class="card-title">Trevelers Toolbox</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-info">Read more</a>
+                    </div>
+                    <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
              </div>
 
              <div class="col-lg-4">
@@ -294,15 +315,7 @@
    <!-- JQuery -->
     <script type="text/javascript" src="{{ asset('theme/user/js/jquery-2.2.3.min.js') }}"></script>
 
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="{{ asset('theme/user/js/tether.min.js') }}"></script>
-
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{{ asset('theme/user/js/bootstrap.min.js') }}"></script>
-
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="{{ asset('theme/user/js/mdb.min.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
           
 
 </body>

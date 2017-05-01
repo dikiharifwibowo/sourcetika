@@ -179,6 +179,8 @@ return [
 
         //laravel collective form & html
         Collective\Html\HtmlServiceProvider::class,
+        //laravel debugger
+        'Barryvdh\Debugbar\ServiceProvider',
 
     ],
 
@@ -232,6 +234,8 @@ return [
         //laravel collective form & html
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        //laravel debugger
+        'Debugbar' => 'Barryvdh\Debugbar\Facade',
     ],
 
 ];

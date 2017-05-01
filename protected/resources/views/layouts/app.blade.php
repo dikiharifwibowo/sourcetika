@@ -24,9 +24,15 @@
     <link rel="stylesheet" href="{{asset('theme/user/css/font-awesome.min.css')}} ">
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('theme/user/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
 
-    <!-- Material Design Bootstrap -->
-    <link href="{{ asset('theme/user/css/mdb.min.css') }}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+          
 
     <!-- Template styles -->
     <style rel="stylesheet">
@@ -94,11 +100,9 @@
 
 <body>
 
-    <div id="app">
         <!--Navbar-->
         <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar" style="background-color: #33b5e5;">
-            <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="brand" href="{{url('/')}}">
                 <strong>SOURCETIKA</strong>
                 </a>
                 <div class="collapse navbar-collapse" >
@@ -133,7 +137,6 @@
                         @endif
                     </ul>
                 </div>
-            </div>
         </nav>
         <br><br><br>
         @yield('content')
@@ -141,14 +144,14 @@
        
         <br><br>
         <!--Footer-->
-        <footer class="page-footer center" style="background-color: #33b5e5; position: absolute; right: 0;
+        <footer class="page-footer center" style="background-color: #33b5e5;  right: 0;
   bottom: 0;
   left: 0;">
 
             <!--Copyright-->
             <div class="footer-copyright" style="background-color: #33b5e5;">
                 <div class="container">
-                    © 2015 Copyright: <a href="http://www.MDBootstrap.com" rel="nofollow"> sourcetika.com</a>
+                    © 2015 Copyright:  <font color="white">sourcetika.com</font>
 
                 </div>
             </div>
@@ -156,9 +159,6 @@
 
         </footer>
         <!--/.Footer-->
-
-    </div> <!-- app  -->
-    <!-- SCRIPTS -->
 
     <!-- JQuery -->
     <script type="text/javascript" src="{{ asset('theme/user/js/jquery-2.2.3.min.js') }}"></script>

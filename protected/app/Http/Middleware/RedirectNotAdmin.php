@@ -22,6 +22,6 @@ class RedirectNotAdmin
             }
         }
 
-        return redirect()->back();
+        return $next($request);
     }
 }
