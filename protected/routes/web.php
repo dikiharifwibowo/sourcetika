@@ -30,5 +30,6 @@ Route::group(['middleware' => 'admin'], function () {
 	);
 
 	Route::get('/post', 'PostController@index');
+	Route::post('/post', 'PostController@save');
 
 });

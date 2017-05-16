@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('login')
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@endsection
 
 @section('content')
 <br>

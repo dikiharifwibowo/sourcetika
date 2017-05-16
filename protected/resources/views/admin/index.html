@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Firebase Chat App</title>
+	<!-- Google Fonts -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+<!-- CSS Reset -->
+<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+<!-- Milligram CSS minified -->
+<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+
+<!-- You should properly set the path from the main file. -->
+
+<style type="text/css">
+	html, body {
+		height: 100%;
+		overflow: hidden;
+	}
+	.history {
+		overflow-y: scroll;
+	}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="column column-33">
+			<form>
+				<input type="email" id="email" placeholder="Email">
+				<input type="text" id="message" placeholder="Message">
+				<button type="button" id="send"></button>
+			</form>
+		</div>
+		<div class="column history">
+			<table id="history">
+				<tr>
+					<td><img src="http://placehold.it/64" alt=""></td>
+					<td>
+						<strong>Dikih arif</strong>
+						<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+<script type="text/javascript" src="https://cdn.jsdeliver.net/js-md5/0.4.2/md5.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
+
