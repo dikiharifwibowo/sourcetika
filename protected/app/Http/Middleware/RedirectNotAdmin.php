@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 use Session;
 use Closure;
-use Auth; //memanggil auth
+use Illuminate\Support\Facades\Auth;
 class RedirectNotAdmin
 {
     /**
@@ -16,12 +16,13 @@ class RedirectNotAdmin
     public function handle($request, Closure $next)
     {
         if (Auth::check()) {
-            if (Auth::user()->level != 'admin') {
+             if (Auth::user()->level != 'admin') {
                 Session::flash('redirectMessage','Anda Bukan admin');
                 return redirect()->back();
             }
+            return $next($request);
         }
 
-        return $next($request);
+        return redirect()->back();
     }
 }

@@ -5,8 +5,7 @@
 <br>
 <br>
 
-<div class="container">
-    <div class="row">
+        <div class="container">
             <div class="row">
                  <div class="col-lg-8">
                     <div class="col-lg-12">
@@ -49,64 +48,65 @@
                         <!--/.Card-->
                  </div>
             </div>   
-    </div>
-</div>
+        </div>
 <div class="container">
         <hr>
             <h4 align="center">ARTIKEL TERBARU</h4>
         <hr>
         <div class="row">
              <div class="col-lg-8">
-                <div class="col-lg-6">
-                    <div class="card">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
 
-                    <!--Card image-->
-                    <div class="view overlay hm-white-slight">
-                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
-                        <a href="#">
-                            <div class="mask"></div>
-                        </a>
-                    </div>
-                    <!--/.Card image-->
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
 
-                    <!--Card content-->
-                    <div class="card-block">
-                        <!--Title-->
-                        <h4 class="card-title">Trevelers Toolbox</h4>
-                        <!--Text-->
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-info">Read more</a>
-                    </div>
-                    <!--/.Card content-->
+                        <!--Card content-->
+                        <div class="card-block">
+                            <!--Title-->
+                            <h4 class="card-title">Trevelers Toolbox</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-info">Read more</a>
+                        </div>
+                        <!--/.Card content-->
 
+                        </div>
+                        <!--/.Card-->
                     </div>
-                    <!--/.Card-->
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="card">
+                    
+                    <div class="col-lg-6">
+                        <div class="card">
 
-                    <!--Card image-->
-                    <div class="view overlay hm-white-slight">
-                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
-                        <a href="#">
-                            <div class="mask"></div>
-                        </a>
-                    </div>
-                    <!--/.Card image-->
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--/.Card image-->
 
-                    <!--Card content-->
-                    <div class="card-block">
-                        <!--Title-->
-                        <h4 class="card-title">Trevelers Toolbox</h4>
-                        <!--Text-->
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-info">Read more</a>
-                    </div>
-                    <!--/.Card content-->
+                        <!--Card content-->
+                        <div class="card-block">
+                            <!--Title-->
+                            <h4 class="card-title">Trevelers Toolbox</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-info">Read more</a>
+                        </div>
+                        <!--/.Card content-->
 
+                        </div>
+                        <!--/.Card-->
                     </div>
-                    <!--/.Card-->
                 </div>
              </div>
 

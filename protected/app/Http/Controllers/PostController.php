@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
-
+use Image;
 
 class PostController extends Controller
 {
@@ -29,18 +29,22 @@ class PostController extends Controller
     	$member->user_id = Auth::id();
     	$member->kategori_id = $request->kategori_id;
 
-    	$image = $request->file('cover');
-        $filename  = time() . '.' . $image->getClientOriginalExtension();
-        $path = public_path('theme/user/img/' . $filename);
-        Image::make($image->getRealPath())->resize(200, 200)->save($path);
-        $member->cover = $filename;
+        //upload gambar (belum di resize)
+        $file       = $request->file('cover');
+        $fileName   = $file->getClientOriginalName();
+        $request->file('cover')->move("img/post/", $fileName);
 
-    	$member->judul = $request->posts;
+        $member->cover = $fileName;
+
+    	$member->judul = $request->judul;
     	$member->isi = $request->isi;
 
+        if (Auth::user()->level == 'admin') {
+            $member->status = 'setujui';
+        }
 
     	if ($member->save()) {
-    		return redirect('post')->with('success','Pendaftaran berhasil'); //sesion
+    		return redirect('post')->with('success','Artikel Berhasil di buat, Tunggu Reiew dari Sourcetika.com'); //sesion
     	} //jika true maka di bawah tdk di jalankan
 
     	return redirect('post')->with('error','Terjadi Kesalahan');

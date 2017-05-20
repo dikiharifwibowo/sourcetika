@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('theme/user/css/bootstrap.min.css') }}" rel="stylesheet">
-
+    @yield('login')
     <!-- Material Design Bootstrap -->
     <link href="{{ asset('theme/user/css/mdb.min.css') }}" rel="stylesheet">
 

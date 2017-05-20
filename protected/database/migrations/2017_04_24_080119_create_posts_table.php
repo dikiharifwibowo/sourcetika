@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->text('cover');
             $table->string('judul',100);
             $table->text('isi');
+            $table->enum('status', ['menunggu', 'revisi','setujui']);
             $table->timestamps();
             $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
