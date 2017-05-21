@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'Welcome@index');
+Route::get('/{slug}', 'Welcome@read');
 
 Auth::routes();
 
@@ -22,6 +23,7 @@ Route::group(['middleware' => 'admin'], function () {
 			return view ('admin.admin');
 		}
 	);
+
 	
 });
 

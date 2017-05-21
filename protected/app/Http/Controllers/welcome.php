@@ -13,4 +13,10 @@ class welcome extends Controller
 		$posts = post::take(2)->get();
 	    return view('welcome', ['posts' => $posts]);
 	}
+
+	public function read($slug)
+    {
+        $tampilkan = Post::where('slug_judul', $slug)->first();
+        return view('front.read',['data' => $tampilkan]);
+    }
 }

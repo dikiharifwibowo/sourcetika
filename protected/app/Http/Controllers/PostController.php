@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
 use Image;
+use Illuminate\Support\Str; //manggil str utk details artikel
 
 class PostController extends Controller
 {
@@ -37,6 +38,7 @@ class PostController extends Controller
         $member->cover = $fileName;
 
     	$member->judul = $request->judul;
+        $member->slug_judul = Str::slug($request->judul);
     	$member->isi = $request->isi;
 
         if (Auth::user()->level == 'admin') {
@@ -49,5 +51,4 @@ class PostController extends Controller
 
     	return redirect('post')->with('error','Terjadi Kesalahan');
     }
-
 }

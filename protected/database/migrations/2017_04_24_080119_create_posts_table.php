@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->integer('kategori_id')->unsigned();
             $table->text('cover');
             $table->string('judul',100);
+            $table->string('slug_judul',100);
             $table->text('isi');
             $table->enum('status', ['menunggu', 'revisi','setujui']);
             $table->timestamps();

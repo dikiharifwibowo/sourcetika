@@ -59,7 +59,7 @@
                         <div class="card-block">
                             <p>{{$post->kategori->judul}}</p>
                             <!--Title-->
-                            <h4 style="height: 100px;" class="card-title"><a href="{{ url('/details') }}"><strong>{{ strip_tags($post->judul) }}</strong></a> </h4>
+                            <h4 style="height: 100px;" class="card-title"><a href="{{ url('/'.$post->slug_judul) }}"><strong>{{ strip_tags($post->judul) }}</strong></a> </h4>
                             <p style="margin: 2px;">{{$post->user->name}}</p>
                         </div>
                         <!--/.Card content-->
