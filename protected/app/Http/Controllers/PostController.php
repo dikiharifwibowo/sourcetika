@@ -51,4 +51,12 @@ class PostController extends Controller
 
     	return redirect('post')->with('error','Terjadi Kesalahan');
     }
+
+    public function tech($tech) {
+        $hasil = Post::where('judul', 'like', "%$tech%")->paginate(8); //or where atau and 
+
+        //member::where('nim','15.01.3482')->first() ada juga pake get();
+        // return view('front.tech',['tech' => $hasil, 'cari' => $tech]);
+        return view('front.tech',['tech' => $hasil]);
+    }
 }

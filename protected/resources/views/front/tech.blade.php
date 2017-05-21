@@ -1,51 +1,16 @@
     @extends('layouts.app')
-  
 
-    @section('caroseal')
-    
-    <!--Carousel Wrapper-->
-    <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
-        <!--Slides-->
-        <div class="carousel-inner" role="listbox">
-
-            <!-- First slide -->
-            <div class="carousel-item active view hm-black-light" style="background-image: url('{{asset('theme/user/amcc.jpeg')}}'); background-repeat: no-repeat; background-size: cover;">
-                
-                <!-- Caption -->
-                <div class="full-bg-img flex-center white-text">
-                    <ul class="animated fadeInUp col-md-12">
-                        <li>
-                            <h1 class="h1-responsive">Jogja Web Developer Community</h1></li>
-                        <li>
-                            <p>Tulis Pengalamanmu, bagikan ke Komunitas</p>
-                        </li>
-                        <li>
-                            <a href="{{ url('/post') }}" class="btn btn-info btn-lg">MENULIS</a> 
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.Caption -->
-                
-            </div>
-            <!--/.First slide-->
-
-        </div>
-        <!--/.Slides-->
-    </div>
-    <!--/.Carousel Wrapper-->
-    @endsection
-
-    <br>
+    <br><br>
     @section('content')
     <!--Content-->
     <div class="container">
         <hr>
-            <h2 align="center">ARTIKEL TERBARU</h2>
+            <h2 align="center">ARTIKEL BERDASARKAN TECHNOLOGY {{ Request::segment(2) }}</h2>
         <hr>
         <div class="row">
              <div class="col-lg-9">
                 <div class="row">
-                   <?php foreach ($posts as $post) { ?>
+                   <?php foreach ($tech as $post) { ?>
                     <div class="col-lg-4" style="margin-bottom: 20px;">
                         <div class="card" style="height: 360px;">
 
@@ -91,6 +56,7 @@
                     <!--/.Card-->
              </div>
         </div>
+        {!! $tech->links() !!}
     </div>
     <!--/.Content-->
 

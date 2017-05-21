@@ -18,6 +18,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/tech/{tech}', 'PostController@tech');
+
 Route::group(['middleware' => 'admin'], function () {
 	Route::get('/admin', function(){
 			return view ('admin.admin');
