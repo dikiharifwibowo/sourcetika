@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -181,6 +181,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         //laravel debugger
         'Barryvdh\Debugbar\ServiceProvider',
+        //socialite
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -236,6 +238,8 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         //laravel debugger
         'Debugbar' => 'Barryvdh\Debugbar\Facade',
+        //sosialite
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
 
 ];

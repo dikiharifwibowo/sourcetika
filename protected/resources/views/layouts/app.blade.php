@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon-32x32.png') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Sourcetika.com || Jogja Web Developer') }}</title>
+    <title>Sourcetika.com || Jogja Web Developer</title>
 
 
 
@@ -27,9 +28,9 @@
     @yield('login')
     <!-- Material Design Bootstrap -->
     <link href="{{ asset('theme/user/css/mdb.min.css') }}" rel="stylesheet">
-
+    
     <!-- Template styles -->
-    <style rel="stylesheet">
+     <style rel="stylesheet">
         /* TEMPLATE STYLES */
         /* Necessary for full page carousel*/
         
@@ -74,7 +75,11 @@
             }
             
         }
-        
+        #map {  
+                max-width: 100%;
+                height: 200px;
+                width: 100%;
+        }
         .carousel-item,
         .active {
             height: 100%;
@@ -99,7 +104,17 @@
     <!--Navbar-->
     <nav class="navbar navbar-toggleable-md navbar-dark fixed-top scrolling-navbar">
         <div class="container">
-            <div class="collapse navbar-collapse" >
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+         
+            </button>
+               <a class="navbar-brand" href="#">
+
+                <strong><img style="width: 80px; height: 30px;" ></strong>
+
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="navbar-brand" href="{{url('/')}}">SOURCETIKA</a>

@@ -12,11 +12,10 @@
 */
 
 Route::get('/', 'Welcome@index');
-Route::get('/{slug}', 'Welcome@read');
+Route::get('/home', 'HomeController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
 Route::get('/tech/{tech}', 'PostController@tech');
 
@@ -25,8 +24,6 @@ Route::group(['middleware' => 'admin'], function () {
 			return view ('admin.admin');
 		}
 	);
-
-	
 });
 
 Route::group(['middleware' => 'login'], function () {
@@ -34,3 +31,9 @@ Route::group(['middleware' => 'login'], function () {
 	Route::post('/post', 'PostController@save');
 });
 
+
+
+Route::get('social/login/redirect/{provider}', ['uses' => 'Auth\LoginController@redirectToProvider', 'as' => 'social.login']);
+Route::get('social/login/facebook', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('/{slug}', 'Welcome@read');

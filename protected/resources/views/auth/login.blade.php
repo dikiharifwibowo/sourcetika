@@ -53,6 +53,7 @@
                                 </div>
 
                             </div>
+                            <a href="{{ route('social.login', ['facebook']) }}" class="btn btn-primary"><i class="fa fa-facebook"></i> Login dengan Facebook</a>
                         </div>
 
                         <div class="form-group">
