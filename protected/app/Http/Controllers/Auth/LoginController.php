@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Auth;
 
-
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -40,7 +39,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = 'home';
 
     /**
      * Create a new controller instance.
@@ -52,9 +51,13 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'logout']);
     }
 
-    public function redirectToProvider()
+    // public function redirectToProvider()
+    // {
+    //     return Socialite::driver('facebook')->redirect();
+    // }
+    public function redirectToProvider($provider)
     {
-        return Socialite::driver('facebook')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
     /**
@@ -62,15 +65,31 @@ class LoginController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback()
+    // public function handleProviderCallback()
+    // {
+    //     $user = Socialite::driver('facebook')->user();
+
+    //     $authUser = $this->findOrCreateUser($user);
+
+    //     Auth::login($authUser, true);
+
+    //     return redirect()->back();
+    // }
+
+    public function handleProviderCallback($provider)
     {
-        $user = Socialite::driver('facebook')->user();
-
-        $authUser = $this->findOrCreateUser($user);
-
+        try {
+            $user = Socialite::driver($provider)->User();
+        } catch (Exception $e) {
+            return redirect('/social/login/facebook');
+        }
+ 
+        $authUser = $this->findOrCreateUser($user,$provider);
+ 
         Auth::login($authUser, true);
 
-        return redirect()->back();
+        return view('home');
+
     }
 
     /**
@@ -79,35 +98,37 @@ class LoginController extends Controller
      * @param $fbUser
      * @return User
      */
-    private function findOrCreateUser($fbUser)
-    {
-
-        if ($authUser = User::where('facebook_id', $fbUser->id)->first()) {
-            return $authUser;
-        }
-
-        return User::create([
-            'name' => $fbUser->name,
-            'email' => $fbUser->email,
-            'facebook_id' => $fbUser->id,
-            'avatar' => $fbUser->avatar
-        ]);
-
-    }
-    // private function findOrCreateUser($provideruser,$providername)
+    // private function findOrCreateUser($fbUser)
     // {
-    //     $authUser = User::where('email', $provideruser->getEmail())->first();
- 
-    //     if ($authUser){
+
+    //     if ($authUser = User::where('social_id', $fbUser->id)->first()) {
     //         return $authUser;
     //     }
- 
+
     //     return User::create([
-    //         'name' => $provideruser->name,
-    //         'email' => $provideruser->getEmail(),
-    //         'social_id' => $provideruser->getId(),
-    //     'social_provider' => $providername,
-    //         'avatar' => $provideruser->getAvatar()
+    //         'name' => $fbUser->name,
+    //         'email' => $fbUser->email,
+    //         'social_id' => $fbUser->id,
+    //         'avatar' => $fbUser->avatar
     //     ]);
+
     // }
+    private function findOrCreateUser($provideruser,$providername)
+    {
+        $authUser = User::where('email', $provideruser->getEmail())->first();
+ 
+        if ($authUser){
+            return $authUser;
+        }
+ 
+        return User::create([
+            'name' => $provideruser->name,
+            'level' => 'member',
+            'email' => $provideruser->getEmail(),
+            'social_id' => $provideruser->getId(),
+            'social_provider' => $providername,
+            'avatar' => $provideruser->getAvatar()
+        ]);
+    }
+
 }

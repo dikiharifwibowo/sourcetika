@@ -33,7 +33,10 @@ Route::group(['middleware' => 'login'], function () {
 
 
 
+// Route::get('social/login/redirect/{provider}', ['uses' => 'Auth\LoginController@redirectToProvider', 'as' => 'social.login']);
+// Route::get('social/login/facebook', 'Auth\LoginController@handleProviderCallback');
+
 Route::get('social/login/redirect/{provider}', ['uses' => 'Auth\LoginController@redirectToProvider', 'as' => 'social.login']);
-Route::get('social/login/facebook', 'Auth\LoginController@handleProviderCallback');
+Route::get('social/login/{provider}', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/{slug}', 'Welcome@read');
