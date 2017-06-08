@@ -1,5 +1,5 @@
-/protected/storage
-/protected/node_modules
+protected/storage/*/
+protected/node_modules/*/
 /public/hot
 /storage/*.key
 /vendor
