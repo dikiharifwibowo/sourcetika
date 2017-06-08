@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<script src="//cdn.ckeditor.com/4.6.2/full/ckeditor.js"></script>
+<!-- Include the required files -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+
 
   <br>
   <br>
@@ -51,8 +53,8 @@
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s12">
-              <textarea style="height: 700px;" required="" id="editor1" name="isi" placeholder="isi artikel"></textarea>
+            <div class="input-field col s12" >
+              <textarea id="MyID" name="isi"></textarea> 
             </div>
           </div>
           
@@ -67,9 +69,23 @@
 
         
     </div>
-    <script>
-            CKEDITOR.replace( 'editor1' );
-        </script>
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+<script>
+var simplemde = new SimpleMDE({ 
+  autofocus: true,
+  autosave: {
+    enabled: true,
+    uniqueId: "MyUniqueID",
+    delay: 100,
+  },
+  blockStyles: {
+    bold: "__",
+    italic: "_"
+  },
+  element: document.getElementById("MyID"),
+  forceSync: true,
 
+});
 
+</script>
 @endsection

@@ -94,6 +94,54 @@
         .flex-center {
             color: #fff;
         }
+input {
+    outline: none;
+}
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+    display: none; 
+}
+
+
+input[type=search] {
+    background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+    
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+}
+input[type=search]:focus {
+    width: 130px;
+    background-color: #fff;
+    border-color: #66CC75;
+    
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
+}
+
+
+input:-moz-placeholder {
+    color: #999;
+}
+input::-webkit-input-placeholder {
+    color: #999;
+}
+
+
     </style>
 </head>
 
@@ -109,9 +157,9 @@
             <span class="navbar-toggler-icon"></span>
          
             </button>
-               <a class="navbar-brand" href="#">
+               <a class="navbar-brand"  href="{{url('/')}}">
 
-                <strong><img style="width: 80px; height: 30px;" ></strong>
+                <strong><img src="{{ asset('img/sourcetika.png') }}" style="width: 80px; height: 30px;" ></strong>
 
             </a>
             <div class="collapse navbar-collapse" id="navbarNav1">
@@ -127,6 +175,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link">Event</a>
+                    </li>
+                    <li class="nav nav-item">
+                        <form class="nav-link" action="{{ url('search') }}" method="post" style="margin: 0px; padding: 0px;">
+                        {{ csrf_field() }}
+                            <input type="search" name="search" placeholder="Search">
+                        </form>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -159,9 +213,9 @@
     <!--Footer-->
     <footer class="page-footer center-on-small-only">
         <!--Copyright-->
-        <div class="footer-copyright">
-            <div class="container-fluid">
-                © 2017 Copyright: <a href="http://www.MDBootstrap.com" rel="nofollow"> Sourcetika.com </a>
+        <div class="copyright">
+            <div class="container-fluid" align="center" style="height: 40px;">
+                © 2017 Copyright: <a href="http://www.MDBootstrap.com" rel="nofollow"> Sourcetika.com </a><br>
 
             </div>
         </div>

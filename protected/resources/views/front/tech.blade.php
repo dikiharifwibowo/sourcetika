@@ -4,8 +4,12 @@
     @section('content')
     <!--Content-->
     <div class="container">
-        <hr>
-            <h2 align="center">ARTIKEL BERDASARKAN TECHNOLOGY {{ Request::segment(2) }}</h2>
+        <hr> 
+        @if (Request::segment(2) === null)
+            <h2 align="center">Pencarian berdasarkan "{{ $cari }}"</h2>
+        @else
+            <h2 align="center">Artikel Berdasarkan Technology "{{ Request::segment(2) }}"</h2>
+        @endif  
         <hr>
         <div class="row">
              <div class="col-lg-9">

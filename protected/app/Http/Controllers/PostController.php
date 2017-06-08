@@ -53,10 +53,25 @@ class PostController extends Controller
     }
 
     public function tech($tech) {
-        $hasil = Post::where('judul', 'like', "%$tech%")->paginate(8); //or where atau and 
-
+        $hasil = Post::where('judul', 'like', "%$tech%")
+        ->orWhere('isi', 'like',"%$tech%")
+        ->paginate(8); //or where atau and 
         //member::where('nim','15.01.3482')->first() ada juga pake get();
         // return view('front.tech',['tech' => $hasil, 'cari' => $tech]);
         return view('front.tech',['tech' => $hasil]);
+    }
+
+    public function search(Request $request) {
+        //$request->nim;
+        //dd($request->all()); //sama ky print
+        $this->validate($request,[
+            'search' => 'required'
+        ]);
+        $hasil = Post::where('judul', 'like', "%$request->search%")
+        ->orWhere('isi', 'like',"%$request->search%")
+        ->paginate(8); //or where atau and 
+        //member::where('nim','15.01.3482')->first() ada juga pake get();
+        // return view('front.tech',['tech' => $hasil, 'cari' => $tech]);
+        return view('front.tech',['tech' => $hasil, 'cari' => $request->search]);
     }
 }

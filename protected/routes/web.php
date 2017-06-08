@@ -18,6 +18,7 @@ Auth::routes();
 
 
 Route::get('/tech/{tech}', 'PostController@tech');
+Route::post('/search', 'PostController@search');
 
 Route::group(['middleware' => 'admin'], function () {
 	Route::get('/admin', function(){
