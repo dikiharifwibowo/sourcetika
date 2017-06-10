@@ -26,8 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {   
-        $posts = post::take(2)->get();
-        return view('home', ['posts' => $posts]);
+        $posts = Post::where('status', 'setujui')->take(8)->get();
+        return view('home', compact('posts', 'posts'));
     }
 
 }

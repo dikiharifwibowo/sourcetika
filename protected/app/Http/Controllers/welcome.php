@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Post; 
 
-class welcome extends Controller
+class Welcome extends Controller
 {
 	public function index() {
 		// Game::limit(30)->offset(30)->get();
