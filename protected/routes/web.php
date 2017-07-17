@@ -12,10 +12,11 @@
 */
 
 Route::get('/', 'Welcome@index');
+Route::get('/shirt', 'Welcome@shirt');
+
 Route::get('/home', 'HomeController@index');
 
 Auth::routes();
-
 
 Route::get('/tech/{tech}', 'PostController@tech');
 Route::post('/search', 'PostController@search');

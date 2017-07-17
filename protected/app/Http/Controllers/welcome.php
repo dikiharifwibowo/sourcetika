@@ -19,4 +19,9 @@ class Welcome extends Controller
         $tampilkan = Post::where('slug_judul', $slug)->first();
         return view('front.read',['data' => $tampilkan]);
     }
+
+    public function shirt()
+    {
+        return view('home');
+    }
 }

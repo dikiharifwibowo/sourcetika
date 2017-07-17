@@ -42,35 +42,174 @@
         </div>
 <div class="container">
         <hr>
-            <h4 align="center">ARTIKEL TERBARU</h4>
+            <h4 align="center">SOURCETIKA</h4>
         <hr>
         <div class="row">
              <div class="col-lg-9">
                 <div class="row">
-                   <?php foreach ($posts as $post) { ?>
                     <div class="col-lg-4" style="margin-bottom: 20px;">
-                        <div class="card" style="height: 360px;">
+                        <div class="card" style="height: 380px;">
 
                         <!--Card image-->
                         <div class="view overlay hm-white-slight">
-                            <img style="height: 160px; width: 100%;" src="{{asset('img/post/'.$post->cover)}}" class="img-fluid" alt="">
+                            <img style="height:300px; width: 100%;" src="{{asset('img/kaos/github.png')}}" class="img-fluid" alt="">
                         </div>
                         <!--/.Card image-->
 
                         <!--Card content-->
                         <div class="card-block">
-                            <p>{{$post->kategori->judul}}</p>
-                            <!--Title-->
-                            
-                            <p style="margin: 2px;">{{$post->user->name}}</p>
+                            <p align="center"><b><strong>
+                            Kaos Github [L]
+                            </strong></b> <br>
+                            Rp. 70.000
+                            </p>
+                           
+                            <p align="center" style="margin: 0px;">
+                            <a href=""><i class="material-icons">add_shopping_cart</i> Pesan </a>
+                            </p>
                         </div>
                         <!--/.Card content-->
 
-                        </div>
+                        </div> 
                         <!--/.Card-->
                     </div>
-                    <?php } ?>
-                </div>
+
+                    <div class="col-lg-4" style="margin-bottom: 20px;">
+                        <div class="card" style="height: 380px;">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img style="height:300px; width: 100%;" src="{{asset('img/kaos/google.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <p align="center"><b><strong>
+                            Kaos Google [L]
+                            </strong></b> <br>
+                            Rp. 70.000
+                            </p>
+                           
+                            <p align="center" style="margin: 0px;">
+                            <a href=""><i class="material-icons">add_shopping_cart</i> Pesan </a>
+                            </p>
+                        </div>
+                        <!--/.Card content-->
+
+                        </div> 
+                        <!--/.Card-->
+                    </div>
+
+                    <div class="col-lg-4" style="margin-bottom: 20px;">
+                        <div class="card" style="height: 380px;">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img style="height:300px; width: 100%;" src="{{asset('img/kaos/node.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <p align="center"><b><strong>
+                            Kaos Node [L]
+                            </strong></b> <br>
+                            Rp. 70.000
+                            </p>
+                           
+                            <p align="center" style="margin: 0px;">
+                            <a href=""><i class="material-icons">add_shopping_cart</i> Pesan </a>
+                            </p>
+                        </div>
+                        <!--/.Card content-->
+
+                        </div> 
+                        <!--/.Card-->
+                    </div>
+
+                    <div class="col-lg-4" style="margin-bottom: 20px;">
+                        <div class="card" style="height: 380px;">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img style="height:300px; width: 100%;" src="{{asset('img/kaos/laravel.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <p align="center"><b><strong>
+                            Kaos Laravel [L]
+                            </strong></b> <br>
+                            Rp. 70.000
+                            </p>
+                           
+                            <p align="center" style="margin: 0px;">
+                            <a href=""><i class="material-icons">add_shopping_cart</i> Pesan </a>
+                            </p>
+                        </div>
+                        <!--/.Card content-->
+
+                        </div> 
+                        <!--/.Card-->
+                    </div>
+
+                    <div class="col-lg-4" style="margin-bottom: 20px;">
+                        <div class="card" style="height: 380px;">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img style="height:300px; width: 100%;" src="{{asset('img/kaos/react.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <p align="center"><b><strong>
+                            Kaos React [L]
+                            </strong></b> <br>
+                            Rp. 70.000
+                            </p>
+                           
+                            <p align="center" style="margin: 0px;">
+                            <a href=""><i class="material-icons">add_shopping_cart</i> Pesan </a>
+                            </p>
+                        </div>
+                        <!--/.Card content-->
+
+                        </div> 
+                        <!--/.Card-->
+                    </div>
+
+                    <div class="col-lg-4" style="margin-bottom: 20px;">
+                        <div class="card" style="height: 380px;">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight">
+                            <img style="height:300px; width: 100%;" src="{{asset('img/kaos/programmer.png')}}" class="img-fluid" alt="">
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <p align="center"><b><strong>
+                            Kaos Fullstack [L]
+                            </strong></b> <br>
+                            Rp. 70.000
+                            </p>
+                           
+                            <p align="center" style="margin: 0px;">
+                            <a href=""><i class="material-icons">add_shopping_cart</i> Pesan </a>
+                            </p>
+                        </div>
+                        <!--/.Card content-->
+
+                        </div> 
+                        <!--/.Card-->
+                    </div>
+
+                </div> 
              </div>
 
 
@@ -91,7 +230,9 @@
 
                     </div>
                     <!--/.Card-->
-             </div>
+            </div>
+
+            
         </div>
     </div>
 @endsection

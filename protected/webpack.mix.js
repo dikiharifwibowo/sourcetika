@@ -11,5 +11,12 @@ const { mix } = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+// mix.js('theme/user/js/mdb.min.js', 'js/app.js');
+   // .sass('theme/user/css/mdb.min.css', 'css');
+
+new BrowserSyncPlugin({
+	open: 'external',
+	host: 'example.dev',
+	proxy: 'example.dev',
+	files: ['protected/resources/views/**/*.php', 'protected/app/**/*.php', 'protected/routes/**/*.php']
+})
