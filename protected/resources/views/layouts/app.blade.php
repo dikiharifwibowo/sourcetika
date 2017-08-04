@@ -28,7 +28,6 @@
     @yield('login')
     <!-- Material Design Bootstrap -->
     <link href="{{ asset('theme/user/css/mdb.min.css') }}" rel="stylesheet">
-    
     <!-- Template styles -->
      <style rel="stylesheet">
         /* TEMPLATE STYLES */
@@ -239,6 +238,8 @@ input::-webkit-input-placeholder {
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="{{ asset('theme/user/js/mdb.min.js') }}"></script>
+    <script src="{{ asset('protected/public/js/app.js') }}"></script>
+    
     <script>
     new WOW().init();
     </script>
